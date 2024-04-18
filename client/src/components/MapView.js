@@ -11,7 +11,7 @@ function MyComponent() {
 
 function MapView() {
   return (
-          <MapContainer center={[50.5, 30.5]} zoom={20} style={{height: "50vh", width: "50vw"}}>
+          <MapContainer center={[50.5, 30.5]} zoom={15} style={{height: "50vh", width: "50vw"}}>
             <MyComponent />
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

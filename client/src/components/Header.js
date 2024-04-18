@@ -19,6 +19,13 @@ function Header() {
               >
                 <Nav.Link href="/perfil">Perfil</Nav.Link>
               </Nav>
+              <Nav
+                className="mx-4 my-2 my-lg-0"
+                style={{ maxHeight: '100px' }}
+                navbarScroll
+              >
+                <Nav.Link href="/route">Route</Nav.Link>
+              </Nav>
               <Form className="d-flex me-auto">
                 <Form.Control
                   type="search"
