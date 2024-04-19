@@ -7,7 +7,6 @@ import axios from "axios";
 function MyComponent({ startPoint, endPoint }) {
   const map = useMap();
   const myapikey = "5b3ce3597851110001cf62485cc344608531435a8bdce1033c4284ea"; // Tu API key de OpenRouteService
-  const [routePolyline, setRoutePolyline] = useState(null); // Estado para almacenar la ruta
 
   useEffect(() => {
     const getRoute = async () => {
@@ -16,16 +15,10 @@ function MyComponent({ startPoint, endPoint }) {
           `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${myapikey}&start=${startPoint[1]},${startPoint[0]}&end=${endPoint[1]},${endPoint[0]}`
         );
 
-        const routeCoordinates = response.data.features[0].geometry.coordinates;
-
-        // Remover la ruta anterior si existe
-        if (routePolyline) {
-          map.removeLayer(routePolyline);
-        }
+        const routeCoordinates = response.data.features[0].geometry.coordinates.map(coord => [coord[1], coord[0]]); // Intercambiar el orden de las coordenadas
 
         // Dibujar la nueva ruta
         const polyline = L.polyline(routeCoordinates, { color: 'blue' }).addTo(map);
-        setRoutePolyline(polyline);
 
         // Ajustar el mapa para que se vea toda la ruta
         map.fitBounds(polyline.getBounds());
@@ -37,7 +30,7 @@ function MyComponent({ startPoint, endPoint }) {
     if (startPoint && endPoint) {
       getRoute();
     }
-  }, [map, startPoint, endPoint, routePolyline]); // Agregar routePolyline como dependencia
+  }, [map, startPoint, endPoint]);
 
   return null;
 }
