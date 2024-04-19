@@ -42,28 +42,26 @@ const customMarkerIcon = L.icon({
 });
 
 function MapView() {
-  const startPoint = [39.9946, -0.0714]; // Ingresa las coordenadas del punto de inicio aquí
-  const endPoint = [39.9754, -0.0566]; // Ingresa las coordenadas del punto de fin aquí
+  const startPoint = [39.994942,-0.066562]; // Longitud, Latitud
+  const endPoint = [39.974287,-0.056597];   // Longitud, Latitud
 
   return (
-    <MapContainer center={[39.9946, -0.0714]} zoom={15} style={{ height: "50vh", width: "50vw" }}>
+    <MapContainer center={startPoint} zoom={15} style={{ height: "50vh", width: "50vw" }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      {/* Marcador para el punto de inicio */}
       <Marker position={startPoint} icon={customMarkerIcon}>
         <Popup>
           Punto de inicio
         </Popup>
       </Marker>
-      {/* Marcador para el punto de fin */}
       <Marker position={endPoint} icon={customMarkerIcon}>
         <Popup>
           Punto de fin
         </Popup>
       </Marker>
-      {/* Pasa las coordenadas de los puntos como props al componente MyComponent */}
+      {/* Pasamos las coordenadas como props al componente MyComponent */}
       <MyComponent startPoint={startPoint} endPoint={endPoint} />
     </MapContainer>
   );
