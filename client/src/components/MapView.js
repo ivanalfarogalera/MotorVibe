@@ -1,37 +1,8 @@
-// import React from "react";
-// import { MapContainer, TileLayer, useMap } from "react-leaflet";
-// import 'leaflet/dist/leaflet.css';
-
-
-// function MyComponent() {
-//   const map = useMap();
-//   console.log('map center:', map.getCenter());
-//   return null;
-// }
-
-// function MapView() {
-//   const startPoint = [39.9946,-0.0714];
-//   const endPoint = [39.9754,-0.0566];
-
-
-//   return (
-//           <MapContainer center={[39.9946,-0.0714]} zoom={15} style={{height: "50vh", width: "50vw"}}>
-//             <MyComponent startPoint={startPoint} endPoint={endPoint} />
-//             <TileLayer
-//               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//             />
-//           </MapContainer>
-//   );
-// }
-
-
-// export default MapView;
-
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MyComponent from "./MyComponent";
 import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
 // Define un nuevo icono para el marcador
 const customMarkerIcon = L.icon({
