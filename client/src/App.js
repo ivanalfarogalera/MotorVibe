@@ -4,9 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { Link, Route, Switch } from "wouter";
 
-import SignIn from './pages/SignIn';
-import SignUp from "./pages/SignUp";
-import Perfil from "./pages/Perfil";
 import MyRoutePage from "./pages/MyRoute";
 import SignInPage from "./pages/SignIn";
 import SignUpPage from "./pages/SignUp";
