@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MyComponent from "./MyComponent";
 import L from 'leaflet';
@@ -13,27 +13,39 @@ const customMarkerIcon = L.icon({
 });
 
 function MapView() {
-  const startPoint = [39.994942,-0.066562]; // Longitud, Latitud
-  const endPoint = [39.974287,-0.056597];   // Longitud, Latitud
+  const [routeData, setRouteData] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/ruta');
+      const data = await response.json();
+      setRouteData(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   return (
-    <MapContainer center={startPoint} zoom={15} style={{ height: "50vh", width: "50vw" }}>
+    <MapContainer center={[39.994942, -0.066562]} zoom={15} style={{ height: "50vh", width: "50vw" }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={startPoint} icon={customMarkerIcon}>
-        <Popup>
-          Punto de inicio
-        </Popup>
-      </Marker>
-      <Marker position={endPoint} icon={customMarkerIcon}>
-        <Popup>
-          Punto de fin
-        </Popup>
-      </Marker>
-      {/* Pasamos las coordenadas como props al componente MyComponent */}
-      <MyComponent startPoint={startPoint} endPoint={endPoint} />
+      {routeData && (
+        <>
+          <Marker position={[routeData.iniciolongitud, routeData.iniciolatitud]} icon={customMarkerIcon}>
+            <Popup>{routeData.nombre}</Popup>
+          </Marker>
+          <Marker position={[routeData.finlongitud, routeData.finlatitud]} icon={customMarkerIcon}>
+            <Popup>{routeData.descripcion}</Popup>
+          </Marker>
+          <MyComponent startPoint={[routeData.iniciolongitud, routeData.iniciolatitud]} endPoint={[routeData.finlongitud, routeData.finlatitud]} />
+        </>
+      )}
     </MapContainer>
   );
 }
