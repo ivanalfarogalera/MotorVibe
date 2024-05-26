@@ -2,11 +2,11 @@ function Perfil() {
     return (
               <div className="card">
                 <div className="rounded-top text-white d-flex flex-row bg-dark" >
-                  <div className="ms-4 mt-5 d-flex flex-column" >
+                  <div className="ms-4 mt-5 mb-4 d-flex flex-column" >
                     <p>
                         Mi foto
                     </p>
-                    <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-outline-dark" data-mdb-ripple-color="dark">
+                    <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-outline-light" data-mdb-ripple-color="dark">
                       Edit profile
                     </button>
                   </div>

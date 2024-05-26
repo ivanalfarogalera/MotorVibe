@@ -1,41 +1,23 @@
 {
   "development": {
-    "username": "ivanalfaro",
-    "password": "ogkjxvMYvjVB63THTHwEp1y1TXUHGUaI",
-    "host": "dpg-cp33ppi1hbls7388i4g0-a.frankfurt-postgres.render.com",
+    "username": "postgres",
+    "password": "postgres",
     "database": "MotorVibe",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": "true",
-        "rejectUnauthorized": "false"
-      }
-    }
+    "host": "localhost",
+    "dialect": "postgres"
   },
   "test": {
-    "username": "ivanalfaro",
-    "password": "ogkjxvMYvjVB63THTHwEp1y1TXUHGUaI",
-    "host": "dpg-cp33ppi1hbls7388i4g0-a.frankfurt-postgres.render.com",
+    "username": "postgres",
+    "password": "postgres",
     "database": "MotorVibe",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": "true",
-        "rejectUnauthorized": "false"
-      }
-    }
+    "host": "localhost",
+    "dialect": "postgres"
   },
   "production": {
-    "username": "ivanalfaro",
-    "password": "ogkjxvMYvjVB63THTHwEp1y1TXUHGUaI",
-    "host": "dpg-cp33ppi1hbls7388i4g0-a.frankfurt-postgres.render.com",
+    "username": "postgres",
+    "password": "postgres",
     "database": "MotorVibe",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": "true",
-        "rejectUnauthorized": "false"
-      }
-    }
+    "host": "localhost",
+    "dialect": "postgres"
   }
 }
