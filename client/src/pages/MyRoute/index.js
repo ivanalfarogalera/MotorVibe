@@ -41,7 +41,7 @@ function MyRoutePage() {
       {routeData ? (
         <>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 mb-3">
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title">Detalles de la Ruta</h5>
@@ -55,7 +55,7 @@ function MyRoutePage() {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-8">
               <MapView
                 inicioLatitud={routeData.iniciolatitud}
                 inicioLongitud={routeData.iniciolongitud}
@@ -64,7 +64,7 @@ function MyRoutePage() {
                 nombre={routeData.nombre}
                 descripcion={routeData.descripcion}
                 alto={'50vh'}
-                ancho={'80vh'}
+                ancho={'80%'}
               />
             </div>
           </div>

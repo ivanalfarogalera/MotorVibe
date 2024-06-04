@@ -19,8 +19,8 @@ const RouteCard = ({ id, inicioLatitud, inicioLongitud, finLatitud, finLongitud,
           finLongitud={finLongitud}
           nombre={nombre}
           descripcion={descripcion}
-          alto={'30vh'}
-          ancho={'80%'}
+          alto={'50vh'}
+          ancho={'100%'}
         />
       </div>
     </div>
