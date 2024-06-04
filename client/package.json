@@ -23,12 +23,15 @@
     "wouter": "^3.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=80 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3000",
+  "options": {
+    "allowedHosts": ["localhost", ".localhost"],
+    "proxy": "http://200.234.234.109:80"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -21,7 +21,7 @@
 
 //   const fetchData = async () => {
 //     try {
-//       const response = await fetch('http://localhost:3001/ruta');
+//       const response = await fetch('http://200.234.234.109:3001/ruta');
 //       const data = await response.json();
 //       setRouteData(data);
 //     } catch (error) {

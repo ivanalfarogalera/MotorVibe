@@ -27,7 +27,7 @@ function MyRoutesList() {
 
   const fetchRoutes = async () => {
     try {
-      const response = await fetch('http://localhost:3001/rutas');
+      const response = await fetch('http://backend.motorvibe.es:443/rutas');
       const data = await response.json();
       setRoutes(data);
     } catch (error) {

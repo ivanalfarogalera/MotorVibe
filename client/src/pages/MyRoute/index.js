@@ -28,7 +28,7 @@ function MyRoutePage() {
 
   const fetchRouteData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/ruta');
+      const response = await fetch('http://backend.motorvibe.es:443/ruta');
       const data = await response.json();
       setRouteData(data);
     } catch (error) {
