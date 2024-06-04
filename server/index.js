@@ -5,10 +5,10 @@ const cors = require('cors');
 const { Ruta } = require('./models'); 
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 443;
 
 app.use(cors({
-  origin: 'http://localhost:3000' // Reemplaza esto con el origen de tu aplicación React
+  origin: '*' // Reemplaza esto con el origen de tu aplicación React
 }));
 
 app.use(express.json());
