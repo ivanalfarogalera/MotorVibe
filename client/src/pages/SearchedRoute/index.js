@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container } from 'react-bootstrap';
 import MapView from "../../components/MapView";
 
-function MyRoutePage() {
+function SearchedRoutePage() {
   const [routeData, setRouteData] = useState(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ function MyRoutePage() {
 
   const fetchRouteData = async () => {
     try {
-      const response = await fetch('http://backend.motorvibe.es:443/ruta');
+      const response = await fetch('http://backend.motorvibe.es:443/buscaruta/4');
       const data = await response.json();
       setRouteData(data);
     } catch (error) {
@@ -76,4 +76,4 @@ function MyRoutePage() {
   );
 }
 
-export default MyRoutePage;
+export default SearchedRoutePage;

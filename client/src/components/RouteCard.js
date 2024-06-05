@@ -6,12 +6,34 @@ const RouteCard = ({ id, inicioLatitud, inicioLongitud, finLatitud, finLongitud,
     <div className="card mb-3">
       <div className="card-body">
         <h5 className="card-title">{nombre}</h5>
-        <p className="card-text">{descripcion}</p>
         <ul className="list-group list-group-flush mb-3">
           <li className="list-group-item"><strong>ID:</strong> {id}</li>
-          <li className="list-group-item"><strong>Inicio:</strong> Latitud {inicioLatitud}, Longitud {inicioLongitud}</li>
-          <li className="list-group-item"><strong>Fin:</strong> Latitud {finLatitud}, Longitud {finLongitud}</li>
         </ul>
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Punto</th>
+              <th scope="col">Longitud</th>
+              <th scope="col">Latitud</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Inicio</td>
+              <td>{inicioLatitud}</td>
+              <td>{inicioLongitud}</td>
+            </tr>
+            <tr>
+              <td>Fin</td>
+              <td>{finLatitud}</td>
+              <td>{finLongitud}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div className="mb-4">
+          <h6>Descripción:</h6>
+          <p className="card-text">{descripcion}</p>
+        </div>
         <MapView
           inicioLatitud={inicioLatitud}
           inicioLongitud={inicioLongitud}

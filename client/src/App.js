@@ -9,13 +9,15 @@ import MyRoutePage from "./pages/MyRoute";
 import SignInPage from "./pages/SignIn";
 import SignUpPage from "./pages/SignUp";
 import PerfilPage from "./pages/Perfil";
+import NewRoutePage from "./pages/NewRoute";
+import SearchedRoutePage from "./pages/SearchedRoute";
 
 const HomePage = React.lazy(() => import("./pages/Home"));
 
 export default function App() {
   return (
 
-    <section className="App-content">
+    <section className="App-content bg-info">
       <Header />
       <Link to="/">
       </Link>
@@ -26,6 +28,8 @@ export default function App() {
         <Route component={PerfilPage} path="/Perfil" />
         <Route component={MyRoutePage} path="/Ruta" />
         <Route component={MyRoutesList} path="/MisRutas" />
+        <Route component={NewRoutePage} path="/NuevaRuta" />
+        <Route component={SearchedRoutePage} path="/BuscaRuta" />
       </Switch>
       <Footer />
     </section>
