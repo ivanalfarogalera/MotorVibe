@@ -37,7 +37,7 @@ function MyRoutesList() {
 
   return (
     <Container className="mt-5">
-      <h1 className="mb-4">Mis rutas</h1>
+      <h1 className="mb-4 text-center">Mis rutas</h1>
       {routes.map(route => (
         <Row key={route.id} className="mb-4">
           <Col>
