@@ -15,7 +15,7 @@ const HomePage = React.lazy(() => import("./pages/Home"));
 export default function App() {
   return (
 
-    <section className="App-content">
+    <section className="App-content bg-info">
       <Header />
       <Link to="/">
       </Link>
