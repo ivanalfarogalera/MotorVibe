@@ -1,20 +1,3 @@
-// import React from "react";
-
-// import { Container } from 'react-bootstrap';
-// import MapView from "../../components/MapView";
-// import RouteCard from "../../components/RouteCard";
-
-// function MyRoutePage() {
-//   return (
-//     <Container>
-//       <RouteCard />
-//       <MapView />
-//     </Container>
-//   );
-// }
-
-// export default MyRoutePage;
-
 import React, { useState, useEffect } from "react";
 import { Container } from 'react-bootstrap';
 import MapView from "../../components/MapView";
@@ -40,22 +23,33 @@ function MyRoutePage() {
     <Container className="mt-5">
       {routeData ? (
         <>
+          <h1 className="text-center mb-4">{routeData.nombre}</h1>
           <div className="row">
-            <div className="col-md-4 mb-3">
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title">Detalles de la Ruta</h5>
-                  <ul className="list-group list-group-flush">
-                    {Object.entries(routeData).map(([key, value]) => (
-                      <li className="list-group-item" key={key}>
-                        <strong>{key}:</strong> {value}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+            <div className="col-md-6 mb-4">
+              <h3>Punto de Inicio</h3>
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">
+                  <strong>Latitud:</strong> {routeData.iniciolatitud}
+                </li>
+                <li className="list-group-item">
+                  <strong>Longitud:</strong> {routeData.iniciolongitud}
+                </li>
+              </ul>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-6 mb-4">
+              <h3>Punto de Fin</h3>
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">
+                  <strong>Latitud:</strong> {routeData.finlatitud}
+                </li>
+                <li className="list-group-item">
+                  <strong>Longitud:</strong> {routeData.finlongitud}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
               <MapView
                 inicioLatitud={routeData.iniciolatitud}
                 inicioLongitud={routeData.iniciolongitud}
@@ -64,8 +58,14 @@ function MyRoutePage() {
                 nombre={routeData.nombre}
                 descripcion={routeData.descripcion}
                 alto={'50vh'}
-                ancho={'80%'}
+                ancho={'100%'}
               />
+            </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col-md-12 text-center">
+              <h3>Descripción</h3>
+              <p>{routeData.descripcion}</p>
             </div>
           </div>
         </>
