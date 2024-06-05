@@ -29,10 +29,10 @@ function MyRoutePage() {
               <h3>Punto de Inicio</h3>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
-                  <strong>Latitud:</strong> {routeData.iniciolatitud}
+                  <strong>Longitud:</strong> {routeData.iniciolatitud}
                 </li>
                 <li className="list-group-item">
-                  <strong>Longitud:</strong> {routeData.iniciolongitud}
+                  <strong>Latitud:</strong> {routeData.iniciolongitud}
                 </li>
               </ul>
             </div>
@@ -40,10 +40,10 @@ function MyRoutePage() {
               <h3>Punto de Fin</h3>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
-                  <strong>Latitud:</strong> {routeData.finlatitud}
+                  <strong>Longitud:</strong> {routeData.finlatitud}
                 </li>
                 <li className="list-group-item">
-                  <strong>Longitud:</strong> {routeData.finlongitud}
+                  <strong>Latitud:</strong> {routeData.finlongitud}
                 </li>
               </ul>
             </div>

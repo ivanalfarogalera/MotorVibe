@@ -13,6 +13,22 @@ app.use(cors({
 
 app.use(express.json());
 
+// Ruta para obtener una ruta por su ID
+app.get('/buscaruta/:id', async (req, res) => {
+  const rutaId = req.params.id; // Obtener el ID de la ruta de los parámetros de la solicitud
+  try {
+    const ruta = await Ruta.findByPk(rutaId); // Consultar la ruta en la base de datos por su ID
+    if (!ruta) {
+      return res.status(404).json({ message: 'Ruta no encontrada' }); // Si no se encuentra la ruta, devolver un mensaje de error
+    }
+    res.json(ruta); // Devolver la ruta encontrada como respuesta en formato JSON
+  } catch (error) {
+    console.error('Error al obtener la ruta por su ID:', error);
+    res.status(500).json({ message: 'Error interno del servidor' });
+  }
+});
+
+
 // Ruta para obtener la primera ruta
 app.get('/ruta', async (req, res) => {
   try {

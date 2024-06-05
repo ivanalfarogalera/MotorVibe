@@ -13,8 +13,8 @@ const RouteCard = ({ id, inicioLatitud, inicioLongitud, finLatitud, finLongitud,
           <thead>
             <tr>
               <th scope="col">Punto</th>
-              <th scope="col">Latitud</th>
               <th scope="col">Longitud</th>
+              <th scope="col">Latitud</th>
             </tr>
           </thead>
           <tbody>

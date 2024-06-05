@@ -58,19 +58,19 @@ function NewRoute() {
       <Form.Control type="text" name="nombre" value={routeData.nombre} onChange={handleChange} required />
     </Form.Group>
     <Form.Group controlId="formInicioLatitud">
-      <Form.Label><strong>Inicio Latitud</strong></Form.Label>
+      <Form.Label><strong>Inicio Longitud</strong></Form.Label>
       <Form.Control type="text" name="iniciolatitud" value={routeData.iniciolatitud} onChange={handleChange} required />
     </Form.Group>
     <Form.Group controlId="formInicioLongitud">
-      <Form.Label><strong>Inicio Longitud</strong></Form.Label>
+      <Form.Label><strong>Inicio Latitud</strong></Form.Label>
       <Form.Control type="text" name="iniciolongitud" value={routeData.iniciolongitud} onChange={handleChange} required />
     </Form.Group>
     <Form.Group controlId="formFinLatitud">
-      <Form.Label><strong>Fin Latitud</strong></Form.Label>
+      <Form.Label><strong>Fin Longitud</strong></Form.Label>
       <Form.Control type="text" name="finlatitud" value={routeData.finlatitud} onChange={handleChange} required />
     </Form.Group>
     <Form.Group controlId="formFinLongitud">
-      <Form.Label><strong>Fin Longitud</strong></Form.Label>
+      <Form.Label><strong>Fin Latitud</strong></Form.Label>
       <Form.Control type="text" name="finlongitud" value={routeData.finlongitud} onChange={handleChange} required />
     </Form.Group>
     <Form.Group controlId="formDescripcion">
