@@ -10,6 +10,7 @@ import SignInPage from "./pages/SignIn";
 import SignUpPage from "./pages/SignUp";
 import PerfilPage from "./pages/Perfil";
 import NewRoutePage from "./pages/NewRoute";
+import SearchedRoutePage from "./pages/SearchedRoute";
 
 const HomePage = React.lazy(() => import("./pages/Home"));
 
@@ -28,6 +29,7 @@ export default function App() {
         <Route component={MyRoutePage} path="/Ruta" />
         <Route component={MyRoutesList} path="/MisRutas" />
         <Route component={NewRoutePage} path="/NuevaRuta" />
+        <Route component={SearchedRoutePage} path="/BuscaRuta" />
       </Switch>
       <Footer />
     </section>
