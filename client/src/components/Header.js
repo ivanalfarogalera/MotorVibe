@@ -30,6 +30,13 @@ function Header() {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
+                <Nav.Link href="/nuevaruta">Crear Ruta</Nav.Link>
+              </Nav>
+              <Nav
+                className="mx-4 my-2 my-lg-0"
+                style={{ maxHeight: '100px' }}
+                navbarScroll
+              >
                 <Nav.Link href="/misrutas">Lista Rutas</Nav.Link>
               </Nav>
               <Form className="d-flex me-auto">
